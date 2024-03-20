@@ -4,14 +4,17 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import '../src/styles/global/normalize.css';
 import '../src/styles/global/global.css';
-import { Button } from '@mui/material';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { DetailPage, MainPage } from './pages';
 
 function App() {
   return (
-    <div>
-      <div>gkasdjks</div>
-      <Button>hello world</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<MainPage />} />
+        <Route path='/details' element={<DetailPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
